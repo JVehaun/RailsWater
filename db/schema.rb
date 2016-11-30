@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161119204316) do
+ActiveRecord::Schema.define(version: 20161130172711) do
+
+  create_table "LOGS", primary_key: "ID", force: :cascade do |t|
+    t.string "DATE", limit: 100, null: false
+    t.string "USER", limit: 20,  null: false
+    t.string "LOG",  limit: 100, null: false
+  end
 
   create_table "PURITYREPORTS", primary_key: "REPORTNUM", force: :cascade do |t|
     t.string  "DATE",          limit: 100, null: false
@@ -51,17 +57,17 @@ ActiveRecord::Schema.define(version: 20161119204316) do
     t.string  "username", limit: 20,                  null: false
     t.string  "name",     limit: 20,                  null: false
     t.string  "password", limit: 20,                  null: false
-    t.string  "type",     limit: 20, default: "User", null: false
+    t.string  "role",     limit: 20, default: "User", null: false
     t.integer "banned",   limit: 4,  default: 0,      null: false
     t.integer "logins",   limit: 4,  default: 0,      null: false
   end
 
   create_table "water_reports", primary_key: "report_num", force: :cascade do |t|
-    t.string "date",     limit: 100, null: false
-    t.string "reporter", limit: 20,  null: false
-    t.string "location", limit: 20,  null: false
-    t.string "type",     limit: 20,  null: false
-    t.string "cond",     limit: 20,  null: false
+    t.string "date",       limit: 100, null: false
+    t.string "reporter",   limit: 20,  null: false
+    t.string "location",   limit: 20,  null: false
+    t.string "water_type", limit: 20,  null: false
+    t.string "cond",       limit: 20,  null: false
   end
 
 end

@@ -12,15 +12,13 @@ Registration.main_page = React.createClass({
         name: "",
         username: "",
         password: "",
-        type: "User"
+        role: "User"
       }
     }
   },
 
   submitForm: function () {
     var self = this;
-
-    //self.setState({errors: [], submitting: true});
 
     var data = {
       user: this.state.user
@@ -58,8 +56,8 @@ Registration.main_page = React.createClass({
   },
 
   handleRoleChange: function(e) {
-    this.state.user.type = e.target.value;
-    console.log(this.state.user.type);
+    this.state.user.role = e.target.value;
+    console.log(this.state.user.role);
   },
 
   handleCancel: function(e) {
@@ -131,7 +129,7 @@ Registration.main_page = React.createClass({
             <div className='col-xs-4'>
               <select id='Role'
                       className='form-control input-lg' 
-                      value={ this.state.user.role } 
+                      defaultValue={ this.state.user.role } 
                       onChange={ this.handleRoleChange }>
                 <option key="User" value="User">User</option>
                 <option key="Worker" value="Worker">Worker</option>

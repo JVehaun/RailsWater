@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   validates :password, presence: true
 
   def self.create_with_params user_params
+  	byebug
     attrs = user_params
     attrs[:banned] = false
     attrs[:logins] = 0

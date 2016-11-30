@@ -22,15 +22,11 @@ Login.main_page = React.createClass({
 
   handlePasswordChange: function(e) {
     this.state.password = e.target.value;
-    console.log(this.state.password);
   },
 
   handleLogin: function(e) {
     let self = this;
     (this.props.users).forEach(function(user) {
-      console.log(user);
-      console.log(self.state.username + " " + user.username);
-      console.log(self.state.username == user.username);
       if (self.state.username == user.username) {
         if (self.state.password == user.password) {
           self.setState({logged_in: true})
@@ -40,13 +36,6 @@ Login.main_page = React.createClass({
           }).done(function () {
             window.location.href = "/dashboard/" + user.id;
           });
-        // } else {
-        //   $.ajax({
-        //     method: 'POST',
-        //     url: '/users/' + user.id + "/login_fail/"
-        //   }).done(function () {
-        //     self.setState({error_text: "Password Invalid"});
-        //   });
         }
       }
     });

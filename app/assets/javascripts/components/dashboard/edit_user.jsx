@@ -32,16 +32,19 @@ Dashboard.edit_user = React.createClass({
   },
 
   handleEditUser: function(e) {
+    let self = this;
     console.log(this.state);
     if (!this.state.isEditing) {
       this.setState({isEditing: true});
     } else {
+      console.log("starting ajax");
       $.ajax({
         method: 'PUT',
         url: '/users/' + this.state.current_user.id,
         data: {user: this.state.current_user}
       }).done(function () {
-        this.setState({isEditing: false});
+        console.log("ajax done");
+        self.setState({isEditing: false});
       });
     }
   },
@@ -92,7 +95,7 @@ Dashboard.edit_user = React.createClass({
             <p>Role:</p>
           </div>
           <div className='col-xs-3 text-left'>
-            <p>{ this.state.current_user.type}</p>
+            <p>{ this.state.current_user.role}</p>
           </div>
         </div>
       </div>
@@ -143,7 +146,7 @@ Dashboard.edit_user = React.createClass({
             <p>Role:</p>
           </div>
           <div className='col-xs-3 text-left'>
-            <p>{ this.state.current_user.type }</p>
+            <p>{ this.state.current_user.role }</p>
           </div>
         </div>
       </div>
