@@ -1,0 +1,44 @@
+.modal {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.close {
+    float: right;
+    font-size: 46px;
+    font-weight: lighter;
+    line-height: 1;
+    color: $white;
+    text-shadow: none;
+    opacity: 1;
+    filter: none;
+}
+
+.modal-body {
+  .close {
+    position: absolute;
+    right: -40px;
+    top: -16px;
+    pointer-events: none;
+  }
+}
+
+.modal-content {
+  background-color: #f5f6f7;
+}
+
+.modal.fade.in {
+  background: rgba(52,73,94, 0.6);
+}
+
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 960px;
+  }
+}
+
+@media (min-width: 768px){
+  .modal-sm {
+    width: 460px;
+  }
+}

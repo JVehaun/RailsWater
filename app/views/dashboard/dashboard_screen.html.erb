@@ -1,0 +1,4 @@
+<% provide(:title, "Dashboard Screen") %>
+<%= react_component('Dashboard.main_page',
+					 current_user: @current_user,
+					 water_reports: @water_reports) %>

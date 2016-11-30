@@ -1,0 +1,48 @@
+.btn {
+  @include transition(.5s);
+  font-weight: 600;
+
+  :focus,
+  .focus,
+  :active:focus,
+  .btn.active:focus,
+  .btn.active.focus {
+    border-color: $trustfuel-blue;
+    outline: 0 none;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(27, 186, 200, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(27, 186, 200, 0.6);
+  }
+}
+
+.btn-default {
+  color: $navy-50;
+  background-color: $navy-10;
+  border-color: $navy-10;
+
+  &:hover,
+  &:focus {
+    color: $navy-50;
+    border-color: shade($navy-10, 8);
+    background-color: shade($navy-10, 8);
+  }
+}
+
+.btn-primary {
+  background-color: $trustfuel-blue;
+  border-color: $trustfuel-blue;
+
+  &:hover {
+    border-color: shade($trustfuel-blue, 8);
+    background-color: shade($trustfuel-blue, 8);
+  }
+}
+
+.btn-success {
+  background-color: $trustfuel-green;
+  border-color: $trustfuel-green;
+
+  &:hover {
+    border-color: shade($trustfuel-green, 8);
+    background-color: shade($trustfuel-green, 8);
+  }
+}

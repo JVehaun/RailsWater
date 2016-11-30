@@ -1,0 +1,73 @@
+$spacer: 1px;
+$multiplier: 12;
+$box: $multiplier * 1px;
+$bootstrap_box: 5/4 * $box;
+// $iphone_height: 667px;
+$iphone_height: 607px;
+$iphone_scale: 0.7;
+$survey_desktop_btn_width: 46px;
+$email_width: 600px;
+
+//fonts
+$trustfuel-headings-font:    "freight-text-pro", serif;
+$trustfuel-body-font:        $font-family-sans-serif;
+$trustfuel-numbers-font:     "Helvetica Neue", sans-serif;
+
+
+//colors
+$base-color:                #34495E !default;
+$c1:                        $base-color; // Headings, Field Labels, Important Text
+$c2:                        #99A4AE; // (50% Navy) Navigation, Paragraph Text
+$c3:                        #CCD1D6; // (20% Navy) Table Borders
+$c4:                        #EBEDEF; // (10% Navy) Horizontal Rules, Active States
+$c5:                        #F5F6F7; // (5% Navy) Background
+
+$navy-100:                 $base-color; // Headings, Field Labels, Important Text
+$navy-50:                  #99A4AE; // (50% Navy) Navigation, Paragraph Text
+$navy-20:                  #CCD1D6; // (20% Navy) Table Borders
+$navy-10:                  #EBEDEF; // (10% Navy) Horizontal Rules, Active States
+$navy-5:                   #F5F6F7; // (5% Navy) Background
+$navy-2:                   #FBFBFC; // (2% Navy) Alt panel backgrounds
+
+
+$gray-lightest: lighten($gray-base, 96.5%) !default;
+$trustfuel-blue:             #1BBAC8; // Teal, Primary Color: Links, Primary Buttons
+$trustfuel-blue-5:           rgba(27,186,200, 0.05);; // (5% Teal) Spreadhsheet hover
+$trustfuel-blue-20:          #D1F1F4;
+$trustfuel-blue-50:          #8DDDE4;
+$trustfuel-blue-hover:       #18A5B1;
+
+$trustfuel-peach:            #FFA37E; // Peach Secondary Color
+$trustfuel-peach-20:         rgba(255,163,126, 0.2); // (20% Peach) Selected table rows
+
+$trustfuel-green:            #4CCEAC; // Promoters, Success Elements
+$trustfuel-green-20:         #D3F7EF; // Success Message background
+$trustfuel-green-background: #D3F7EF; // Success Message background
+
+$trustfuel-black-background: #4A4A4A; // Campaign NPS score, table headers
+
+$trustfuel-yellow:           #FED45F; // Passives
+
+$trustfuel-red:              #FA6A4F; // Notifications, non-danger elements
+
+$danger:                     #FA4F4F; // Danger Elements, Remove Buttons
+$danger-red:                 #FA4F4F; //
+$danger-red-20:              #FEDCDC; // Danger element, backgrounds
+
+
+
+$navy20:                     #CCD1D6; // Blank face color
+$white:                      #FFFFFF; // Box backgrounds
+
+
+
+
+// Add percentage of white to a color
+@function tint($color, $percent){
+  @return mix(white, $color, $percent);
+}
+
+// Add percentage of black to a color
+@function shade($color, $percent){
+  @return mix(black, $color, $percent);
+}

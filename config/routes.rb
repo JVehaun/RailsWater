@@ -3,7 +3,22 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'login#login_screen'
+
+  get '/login',             to: 'login#login_screen'
+  get '/registration',      to: 'registration#registration_screen'
+
+  get 'dashboard/:user_id' => 'dashboard#dashboard_screen'
+  put 'dashboard/:user_id' => 'dashboard#dashboard_screen'
+
+  resources 'users', only: [:index, :destroy, :create, :update] do
+    member do
+      post 'login',      to: 'users#login'
+      post 'login_fail', to: 'users#login_fail'
+    end
+  end
+  resources 'water_reports', only: [:index, :destroy, :create, :update] do
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

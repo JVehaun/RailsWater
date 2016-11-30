@@ -1,0 +1,366 @@
+@mixin generate-padding-classes($count) {
+  @for $i from 0 through $count {
+    .pt#{$i} {
+      padding-top: $spacer * $i !important;
+    }
+    .pb#{$i} {
+      padding-bottom: $spacer * $i !important;
+    }
+    .pl#{$i} {
+      padding-left: $spacer * $i !important;
+    }
+    .pr#{$i} {
+      padding-right: $spacer * $i !important;
+    }
+
+    @if $i !=0 and $i % $multiplier == 0 {
+      .pt-box#{$i/$multiplier} {
+        padding-top: $spacer * $i !important;
+      }
+      .pb-box#{$i/$multiplier} {
+        padding-bottom: $spacer * $i !important;
+      }
+      .pl-box#{$i/$multiplier} {
+        padding-left: $spacer * $i !important;
+      }
+      .pr-box#{$i/$multiplier} {
+        padding-right: $spacer * $i !important;
+      }
+      .p-box#{$i/$multiplier} {
+        padding: $spacer * $i !important;
+      }
+    }
+
+    .pt-pc-#{$i} {
+      padding-top: #{$i}% !important;
+    }
+    .pb-pc-#{$i} {
+      padding-bottom: #{$i}% !important;
+    }
+    .pl-pc-#{$i} {
+      padding-left: #{$i}% !important;
+    }
+    .pr-pc-#{$i} {
+      padding-right: #{$i}% !important;
+    }
+  }
+
+  .p0 {
+    padding: 0;
+  }
+}
+
+@mixin generate-margin-classes($count) {
+  @for $i from 0 through $count {
+    .mt#{$i} {
+      margin-top: $spacer * $i !important;
+    }
+    .mb#{$i} {
+      margin-bottom: $spacer * $i !important;
+    }
+    .ml#{$i} {
+      margin-left: $spacer * $i !important;
+    }
+    .mr#{$i} {
+      margin-right: $spacer * $i !important;
+    }
+
+    .mt-neg#{$i} {
+      margin-top: -1 * $spacer * $i !important;
+    }
+    .mb-neg#{$i} {
+      margin-bottom: -1 * $spacer * $i !important;
+    }
+    .ml-neg#{$i} {
+      margin-left: -1 * $spacer * $i !important;
+    }
+    .mr-neg#{$i} {
+      margin-right: -1 * $spacer * $i !important;
+    }
+
+    @if $i !=0 and $i % $multiplier == 0 {
+      .mt-box#{$i/$multiplier} {
+        margin-top: $spacer * $i !important;
+      }
+      .mb-box#{$i/$multiplier} {
+        margin-bottom: $spacer * $i !important;
+      }
+      .ml-box#{$i/$multiplier} {
+        margin-left: $spacer * $i !important;
+      }
+      .mr-box#{$i/$multiplier} {
+        margin-right: $spacer * $i !important;
+      }
+      .m-box#{$i/$multiplier} {
+        margin: $spacer * $i !important;
+      }
+
+      .mt-box-neg#{$i/$multiplier} {
+        margin-top: -1 * $spacer * $i !important;
+      }
+      .mb-box-neg#{$i/$multiplier} {
+        margin-bottom: -1 * $spacer * $i !important;
+      }
+      .ml-box-neg#{$i/$multiplier} {
+        margin-left: -1 * $spacer * $i !important;
+      }
+      .mr-box-neg#{$i/$multiplier} {
+        margin-right: -1 * $spacer * $i !important;
+      }
+    }
+
+    .mt-pc-#{$i} {
+      margin-top: #{$i}% !important;
+    }
+    .mb-pc-#{$i} {
+      margin-bottom: #{$i}% !important;
+    }
+    .ml-pc-#{$i} {
+      margin-left: #{$i}% !important;
+    }
+    .mr-pc-#{$i} {
+      margin-right: #{$i}% !important;
+    }
+  }
+
+  .m0 {
+    margin: 0;
+  }
+}
+
+@mixin generate-positioning-classes($count) {
+  .relative {
+    position: relative;
+  }
+  .absolute {
+    position: absolute;
+  }
+
+  @for $i from 0 through $count {
+    .t#{$i} {
+      top: $spacer * $i !important;
+    }
+    .b#{$i} {
+      bottom: $spacer * $i !important;
+    }
+    .l#{$i} {
+      left: $spacer * $i !important;
+    }
+    .r#{$i} {
+      right: $spacer * $i !important;
+    }
+
+    .t-neg#{$i} {
+      top: -1 * $spacer * $i !important;
+    }
+    .b-neg#{$i} {
+      bottom: -1 * $spacer * $i !important;
+    }
+    .l-neg#{$i} {
+      left: -1 * $spacer * $i !important;
+    }
+    .r-neg#{$i} {
+      right: -1 * $spacer * $i !important;
+    }
+
+    @if $i !=0 and $i % $multiplier == 0 {
+      .t-box#{$i/$multiplier} {
+        top: $spacer * $i !important;
+      }
+      .b-box#{$i/$multiplier} {
+        bottom: $spacer * $i !important;
+      }
+      .l-box#{$i/$multiplier} {
+        left: $spacer * $i !important;
+      }
+      .r-box#{$i/$multiplier} {
+        right: $spacer * $i !important;
+      }
+
+      .t-box-neg#{$i/$multiplier} {
+        top: -1 * $spacer * $i !important;
+      }
+      .b-box-neg#{$i/$multiplier} {
+        bottom: -1 * $spacer * $i !important;
+      }
+      .l-box-neg#{$i/$multiplier} {
+        left: -1 * $spacer * $i !important;
+      }
+      .r-box-neg#{$i/$multiplier} {
+        right: -1 * $spacer * $i !important;
+      }
+    }
+  }
+}
+
+@mixin generate-percentage-widths {
+  @for $i from 1 through 100 {
+    $increment: 101-$i;
+    .pc-width-#{$increment} {
+      width: #{$increment}% !important;
+    }
+  }
+}
+
+@mixin generate-background-classes($colors_collection) {
+  @each $name, $color in $colors_collection {
+    .background-#{$name} {
+      background-color: $color !important;
+    }
+  }
+}
+
+@mixin generate-borders {
+  @for $i from 1 through 5 {
+    .b#{$i} {
+      border: #{$i}px solid $c4!important;
+    }
+    .bb#{$i} {
+      border-bottom: #{$i}px solid $c4!important;
+    }
+    .bt#{$i} {
+      border-top: #{$i}px solid $c4!important;
+    }
+    .br#{$i} {
+      border-right: #{$i}px solid $c4!important;
+    }
+    .bl#{$i} {
+      border-left: #{$i}px solid $c4!important;
+    }
+  }
+
+  .b0 {
+    border: none;
+  }
+}
+
+
+@mixin generate-min-heights($max) {
+  @for $i from 1 through $max {
+    .mh#{$i} {
+      min-height: $spacer * $i !important;
+    }
+
+    @if $i !=0 and $i % $multiplier == 0 {
+      .mh-box#{$i/$multiplier} {
+        min-height: $spacer * $i !important;
+      }
+    }
+  }
+}
+
+@mixin generate-min-widths($max) {
+  @for $i from 1 through $max {
+    .min-width#{$i} {
+      min-width: $spacer * $i !important;
+    }
+
+    @if $i !=0 and $i % $multiplier == 0 {
+      .min-width-box#{$i/$multiplier} {
+        min-width: $spacer * $i !important;
+      }
+    }
+  }
+}
+
+@mixin generate-max-widths($max) {
+  @for $i from 1 through $max {
+    .max-width#{$i} {
+      max-width: $spacer * $i !important;
+    }
+
+    @if $i !=0 and $i % $multiplier == 0 {
+      .max-width-box#{$i/$multiplier} {
+        max-width: $spacer * $i !important;
+      }
+    }
+  }
+}
+
+@mixin generate-font-size-classes($min, $max) {
+  @for $i from $min through $max {
+    .font-size#{$i} {
+      font-size: #{$i}px !important;
+    }
+
+    @if $i % $multiplier == 0 {
+      .font-size-box#{$i/$multiplier} {
+        font-size: #{$i}px !important;
+      }
+    }
+  }
+}
+
+@mixin generate-border-radius($max) {
+  @for $i from 0 through ($max) {
+    .border-radius#{$i} {
+      -webkit-border-radius: $spacer * $i;
+      border-radius: $spacer * $i;
+      background-clip: padding-box;
+    }
+
+    .border-top-radius#{$i} {
+      -webkit-border-top-right-radius:  $spacer * $i;
+      border-top-right-radius:  $spacer * $i;
+      -webkit-border-top-left-radius:  $spacer * $i;
+      border-top-left-radius:  $spacer * $i;
+      background-clip: padding-box;
+    }
+
+    .border-right-radius#{$i} {
+      -webkit-border-bottom-right-radius:  $spacer * $i;
+      border-bottom-right-radius:  $spacer * $i;
+      -webkit-border-top-right-radius:  $spacer * $i;
+      border-top-right-radius:  $spacer * $i;
+      background-clip: padding-box;
+    }
+
+    .border-bottom-radius#{$i} {
+      -webkit-border-bottom-right-radius:  $spacer * $i;
+      border-bottom-right-radius:  $spacer * $i;
+      -webkit-border-bottom-left-radius:  $spacer * $i;
+      border-bottom-left-radius:  $spacer * $i;
+      background-clip: padding-box;
+    }
+
+    .border-left-radius#{$i} {
+      -webkit-border-bottom-left-radius:  $spacer * $i;
+      border-bottom-left-radius:  $spacer * $i;
+      -webkit-border-top-left-radius:  $spacer * $i;
+      border-top-left-radius:  $spacer * $i;
+      background-clip: padding-box;
+    }
+  }
+}
+
+@mixin transition($i) {
+  -webkit-transition: $i;
+  -moz-transition: $i;
+  -ms-transition: $i;
+  -o-transition: $i;
+  transition: $i;
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
