@@ -1,0 +1,144 @@
+//variable overrides
+
+
+//bootstrap
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// trustfuel
+@import "_variables";
+@import "_mixins";
+@import "_normalize";
+
+@import "_panels";
+@import "_box_model";
+@import "_type";
+
+
+//TODO: abstract these styles to their own partials
+/* Abstract */
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  padding-top: 70px;
+}
+
+.primary-blue {
+  color: #fff;
+  background: $trustfuel-blue;
+  border-color: darken($trustfuel-blue, 5%);
+}
+
+.tenant-logo {
+  max-width: 20 * $box;
+}
+/* //Abstract */
+
+#desktop, .email-width {
+  margin: 0 auto;
+  width: $email_width;
+  overflow-x: auto;
+  &.review-page {
+    width: auto;
+  }
+}
+
+#mobile {
+  height: $iphone_height + $box/2;
+}
+
+@import "_survey-btns";
+
+@import "_devices";
+.iphone {
+  height: $iphone_height;
+  overflow-y: auto;
+}
+
+.serif-font {
+  font-family: $trustfuel-body-font;
+}
+
+/* enable absolute positioning */
+.inner-addon {
+    position: relative;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+.full-width {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mw50 {
+  max-width: 50px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.cursor-text {
+  cursor: text;
+}
+
+.inline-block {
+  display: inline-block
+}
+
+.display-none {
+  display: none
+}
+
+.container800 {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.transition {
+  @include transition(.5s);
+}
+
+.z1000 {
+  z-index: 1000;
+}
+
+.vertical-align-top {
+  vertical-align: top;
+}
+
+.vertical-align-bottom {
+  vertical-align: bottom;
+}
+
+.vertical-align-baseline {
+  vertical-align: baseline;
+}
+
+.vertical-align-50 {
+  vertical-align: 50%;
+}

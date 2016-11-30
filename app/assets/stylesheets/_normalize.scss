@@ -1,0 +1,36 @@
+body {
+  @extend .tf-body-book;
+  color: $c1;
+  text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// FIX
+.number {
+  @extend .tf-numbers-bold;
+}
+
+// FIX
+h1, h2,
+.h1, .h2 {
+  @extend .tf-heading-light;
+  color: $c1;
+}
+
+h3, h4, h5, h6,
+.h3, .h4, .h5, .h6 {
+  @extend .tf-heading-semibold;
+  color: $c1;
+}
+
+hr {
+  border-color: $c4;
+}
+
+a {
+  color: $trustfuel-blue;
+  &:hover {
+    color: $trustfuel-blue-hover;
+  }
+}

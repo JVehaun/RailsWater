@@ -1,0 +1,121 @@
+.tf-heading-light {
+  font-family: $trustfuel-headings-font;
+  font-weight: 300;
+}
+.tf-heading-semibold {
+  font-family: $trustfuel-body-font;
+  font-weight: 600;
+}
+.tf-body-book {
+  font-family: $trustfuel-body-font;
+  font-weight: 400;
+}
+.tf-numbers-bold {
+  font-family: $trustfuel-numbers-font;
+  font-weight: 700;
+}
+
+.serif-font {
+  font-family: $trustfuel-body-font;
+}
+
+@include generate-font-size-classes(6, 9 * $multiplier);
+
+.text-muted {
+  color: $c2;
+}
+
+b, strong, .bold, .strong, .semibold {
+  font-weight: 600;
+}
+
+.normal, .not-bold  {
+  font-weight: 300 !important;
+}
+
+.light {
+  font-weight: 200;
+}
+
+.italic { font-style: italic; }
+
+.text-uppercase, .uppercase { text-transform: uppercase; }
+.text-underline { text-decoration: underline; }
+.text-none { text-decoration: none; }
+
+.text-promoter {
+  color: $trustfuel-green;
+}
+.text-passive {
+  color: $trustfuel-yellow;
+}
+.text-detractor {
+  color: $trustfuel-red;
+}
+
+.text-warning {
+  color: $c2;
+}
+
+.text-darker {
+  color: $c2;
+}
+
+.text-gray {
+  color: $navy20;
+}
+
+.primary-font {
+  font-family: $trustfuel-headings-font;
+}
+
+.secondary-font {
+  font-family: $trustfuel-body-font;
+}
+
+
+.space-before {
+  &:before {
+    content: '\20';
+  }
+}
+.at-before {
+  &:before {
+    content: "\20 <%= I18n.t('tenants.contacts.at') %> \20"
+  }
+}
+.comma-space-before {
+  &:before {
+    content: '\2c\20';
+  }
+}
+
+.space-after {
+  &:after {
+    content: '\20';
+  }
+}
+.comma-space-after {
+  &:after {
+    content: '\2c\20';
+  }
+}
+
+.trustfuel-blue-color { color: $trustfuel-blue; }
+.trustfuel-blue-5-color { color: $trustfuel-blue-5; }
+
+.trustfuel-peach-color { color: $trustfuel-peach; }
+.trustfuel-peach-20-color { color: $trustfuel-peach-20; }
+
+.trustfuel-green-color { color: $trustfuel-green;}
+.trustfuel-green-20-color { color: $trustfuel-green-20;}
+
+.navy-100 { color: $navy-100; }
+.navy-50 { color: $navy-50; }
+.navy-20 { color: $navy-20; }
+.navy-10 { color: $navy-10; }
+.navy-5 { color: $navy-5; }
+.navy-2 { color: $navy-2; }
+
+.text-danger { color: $danger-red; }
+.danger { color: $danger !important; }

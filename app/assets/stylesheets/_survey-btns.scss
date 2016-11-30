@@ -1,0 +1,27 @@
+.survey-button {
+  width: $survey_desktop_btn_width;
+  height: $survey_desktop_btn_width;
+  line-height: 32px;
+  margin-bottom: 5px;
+  @extend .tf-numbers-bold;
+
+  &.mobile:last-child:after {
+    content: "\20\2013\20 Very Likely";
+    @extend .font-size-box1;
+    vertical-align: $box/4;
+  }
+
+  &.mobile:first-child:after {
+    content: "\20\2013\20 Not Likely";
+    @extend .font-size-box1;
+    vertical-align: $box/4;
+  }
+}
+
+.btn-toolbar-vertical {
+  .btn,
+  .btn-group,
+  .input-group {
+    @extend .btn-block;
+  }
+}

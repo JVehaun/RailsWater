@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require react
 //= require react_ujs
 //= require components
 //= require_tree .
+
+React              = require('react');
+ReactDOM           = require('react-dom');
+ReactSelect        = require('react-select');

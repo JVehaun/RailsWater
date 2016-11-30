@@ -7,10 +7,10 @@ source 'https://rubygems.org'
 # ==================
 gem 'rails', '4.2.6' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'mysql2', '>= 0.3.13', '< 0.5'# Use mysql as the database for Active Record
+gem 'activerecord-sqlserver-adapter'
 # Web servers
 gem 'puma' # Speed / concurrency / parallelism
 gem 'thin' # dev debugging
-gem 'apartment' # Multi-tenancy database schemas
 gem 'sidekiq'   # Background worker queues and processing
 gem 'apartment-sidekiq'
 gem 'redis'
@@ -27,8 +27,8 @@ gem 'jbuilder', '~> 2.0'   # Build JSON APIs with ease. Read more: https://githu
 # ============================
 gem 'react-rails' # Use ReactRails for the frontend
 gem 'browserify-rails' # Use npm modules in rails
-gem 'sass-rails', '~> 5.0' # Use SCSS for stylesheets
 gem 'bootstrap-sass'   # Bootstrap
+gem 'sass-rails', '~> 5.0' # Use SCSS for stylesheets
 gem 'font-awesome-sass', '>= 4.5.0' # font awesome icons
 gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
 gem 'therubyracer', platforms: :ruby # See https://github.com/rails/execjs#readme for more supported runtimes

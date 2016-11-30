@@ -1,0 +1,31 @@
+@include generate-padding-classes(216);
+@include generate-margin-classes(216);
+@include generate-positioning-classes(216);
+
+@include generate-percentage-widths;
+@include generate-min-heights(600);
+@include generate-min-widths(600);
+@include generate-max-widths(2000);
+
+@include generate-background-classes($colors_collection: (
+
+white: $white,
+gray-lightest: $gray-lightest,
+gray-lighter: $gray-lighter,
+gray-light: $gray-light,
+
+navy-100: $navy-100,
+navy-50: $navy-50,
+navy-20: $navy-20,
+navy-10: $navy-10,
+navy-5: $navy-5,
+navy-2: $navy-2,
+));
+
+.block {
+  display: block !important;
+}
+.no-top-radius {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
